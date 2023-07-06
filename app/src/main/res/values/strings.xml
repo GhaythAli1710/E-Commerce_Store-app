@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">E-Commerce_Store-app</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="store">Store</string>
+
+    <string name="e_commerce_store">E Commerce Store</string>
+    <string name="version">version 0.0.0</string>
 </resources>
