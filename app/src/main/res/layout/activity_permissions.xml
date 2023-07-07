@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".PermissionsActivity">
+
+    <ImageView
+        android:id="@+id/image_permission"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/ic_permission"
+        android:backgroundTint="@color/black"
+        android:contentDescription="TODO"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription,HardcodedText,MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="This app need some permission, please \n check the permission that you allow ... "
+        android:textColor="@color/black_50"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_permission"
+        tools:ignore="HardcodedText" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/checkPerInternet"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:lottie_rawRes="@raw/checkbox"
+        app:layout_constraintTop_toBottomOf="@+id/textt"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@id/textinternet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="INTERNET PERMISSION"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/checkPerInternet"
+        app:layout_constraintTop_toBottomOf="@+id/textt"
+        tools:ignore="HardcodedText" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/checkPerCamera"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:lottie_rawRes="@raw/checkbox"
+        android:layout_marginTop="-40dp"
+        app:layout_constraintTop_toBottomOf="@+id/checkPerInternet"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@id/textcamera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="CAMERA PERMISSION"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/checkPerCamera"
+        app:layout_constraintTop_toBottomOf="@+id/textinternet"
+        tools:ignore="HardcodedText" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/checkPerStorage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:lottie_rawRes="@raw/checkbox"
+        android:layout_marginTop="-40dp"
+        app:layout_constraintTop_toBottomOf="@+id/checkPerCamera"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="41dp"
+        android:text="STORAGE PERMISSION"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/checkPerStorage"
+        app:layout_constraintTop_toBottomOf="@+id/textcamera"
+        tools:ignore="HardcodedText" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/submitBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:lottie_rawRes="@raw/submitanim"
+        android:layout_marginTop="50dp"
+        android:foregroundGravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/checkPerStorage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
