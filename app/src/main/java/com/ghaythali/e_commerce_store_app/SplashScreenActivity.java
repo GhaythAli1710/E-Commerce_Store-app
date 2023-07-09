@@ -3,6 +3,7 @@ package com.ghaythali.e_commerce_store_app;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.WindowManager;
@@ -59,7 +60,7 @@ public class SplashScreenActivity extends AppCompatActivity {
 //                else{
 //                    startActivity(new Intent(SplashScreenActivity.this,MainActivity.class));
 //                }
-//            startActivity(new Intent(SplashScreenActivity.this, HomeActivity.class));
+            startActivity(new Intent(SplashScreenActivity.this, InfoAppActivity.class));
             finish();
         },SPLASH_SCREEN);
     }

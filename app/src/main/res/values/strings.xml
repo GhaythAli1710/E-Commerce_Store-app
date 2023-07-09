@@ -5,4 +5,12 @@
 
     <string name="e_commerce_store">E Commerce Store</string>
     <string name="version">version 0.0.0</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="about">about</string>
+    <string name="constraints">constraints</string>
+    <string name="faq">faq</string>
+    <string name="guides">guides</string>
+    <string name="support">support</string>
+    <string name="tips">tips</string>
 </resources>
