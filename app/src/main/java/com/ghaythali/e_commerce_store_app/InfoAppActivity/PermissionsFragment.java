@@ -1,6 +1,7 @@
-package com.ghaythali.e_commerce_store_app;
+package com.ghaythali.e_commerce_store_app.InfoAppActivity;
 
 import android.Manifest;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.core.app.ActivityCompat;
@@ -12,6 +13,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.airbnb.lottie.LottieAnimationView;
+import com.ghaythali.e_commerce_store_app.R;
+import com.ghaythali.e_commerce_store_app.RegisterActivity.RegisterActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -87,8 +90,8 @@ public class PermissionsFragment extends Fragment {
             //
             new Handler().postDelayed(() -> {
                 grantedPermissions();
-//                startActivity(new Intent(PermissionActivity.this, LoginActivity.class));
-//                finish();
+                startActivity(new Intent(getActivity(), RegisterActivity.class));
+                getActivity().finish();
             },1500);
         });
         return view;

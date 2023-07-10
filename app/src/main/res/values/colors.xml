@@ -10,5 +10,6 @@
 <!---->
     <color name="store_string">#E3E3E3</color>
     <color name="black_50">#80000000</color>
+    <color name="black_40">#66715D5D</color>
 
 </resources>

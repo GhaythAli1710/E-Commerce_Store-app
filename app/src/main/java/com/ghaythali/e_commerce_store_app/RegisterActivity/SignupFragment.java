@@ -1,4 +1,4 @@
-package com.ghaythali.e_commerce_store_app;
+package com.ghaythali.e_commerce_store_app.RegisterActivity;
 
 import android.os.Bundle;
 
@@ -8,13 +8,17 @@ import androidx.fragment.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+
+import com.ghaythali.e_commerce_store_app.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link FAQFragment#newInstance} factory method to
+ * Use the {@link SignupFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class FAQFragment extends Fragment {
+public class SignupFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -25,7 +29,10 @@ public class FAQFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public FAQFragment() {
+    Button btn6, backBtn;
+    EditText name, email, password;
+
+    public SignupFragment() {
         // Required empty public constructor
     }
 
@@ -35,11 +42,11 @@ public class FAQFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment FAQFragment.
+     * @return A new instance of fragment SignupFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static FAQFragment newInstance(String param1, String param2) {
-        FAQFragment fragment = new FAQFragment();
+    public static SignupFragment newInstance(String param1, String param2) {
+        SignupFragment fragment = new SignupFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -59,18 +66,29 @@ public class FAQFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_f_a_q, container, false);
-        view.findViewById(R.id.faqNextBtn).setOnClickListener(new View.OnClickListener() {
+        View view = inflater.inflate(R.layout.fragment_signup, container, false);
+        Initialize(view);
+        backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 getActivity().getSupportFragmentManager()
                         .beginTransaction()
-                        .replace(R.id.fragmentesContainerId, new PermissionsFragment())
+                        .replace(R.id.fragmentesRegisterContainerId, new LoginFragment())
                         .addToBackStack(null)
                         .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
                         .commit();
             }
         });
         return view;
+    }
+
+    /****/
+    private void Initialize(View view){
+        btn6 = view.findViewById(R.id.button6);
+        backBtn = view.findViewById(R.id.backBtn);
+        name = view.findViewById(R.id.nameId);
+        email = view.findViewById(R.id.emailId);
+        password = view.findViewById(R.id.passId);
+
     }
 }

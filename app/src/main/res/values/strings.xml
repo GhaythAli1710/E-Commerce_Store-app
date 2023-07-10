@@ -13,4 +13,15 @@
     <string name="guides">guides</string>
     <string name="support">support</string>
     <string name="tips">tips</string>
+    <string name="username">UserName</string>
+    <string name="login">Login</string>
+    <string name="signup">Signup</string>
+    <string name="asguest">asGuest</string>
+    <string name="password">Password</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="password1">Password</string>
+    <string name="confirmpassword">ConfirmPassword</string>
+    <string name="signup1">SignUp</string>
+    <string name="cancel">Cancel</string>
 </resources>

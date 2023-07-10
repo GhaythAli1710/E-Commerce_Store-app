@@ -4,12 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".InfoAppActivity.InfoAppActivity">
+    tools:context=".RegisterActivity.RegisterActivity">
 
     <RelativeLayout
-        android:id="@+id/fragmentesInfoAppContainerId"
+        android:id="@+id/fragmentesRegisterContainerId"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/store_string"/>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
