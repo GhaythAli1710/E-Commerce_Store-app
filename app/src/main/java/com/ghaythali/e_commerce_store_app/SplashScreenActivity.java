@@ -12,7 +12,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.ghaythali.e_commerce_store_app.InfoAppActivity.InfoAppActivity;
+import com.ghaythali.e_commerce_store_app.HomeActivity.HomeActivity;
 
 @SuppressLint("CustomSplashScreen")
 public class SplashScreenActivity extends AppCompatActivity {

@@ -1,4 +1,4 @@
-package com.ghaythali.e_commerce_store_app;
+package com.ghaythali.e_commerce_store_app.HomeActivity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -11,6 +11,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.ghaythali.e_commerce_store_app.R;
 import com.ismaeldivita.chipnavigation.ChipNavigationBar;
 import com.shrikanthravi.customnavigationdrawer2.data.MenuItem;
 import com.shrikanthravi.customnavigationdrawer2.widget.SNavigationDrawer;

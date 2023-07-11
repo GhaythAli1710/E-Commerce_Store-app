@@ -13,8 +13,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.ghaythali.e_commerce_store_app.HomeActivity;
-import com.ghaythali.e_commerce_store_app.InfoAppActivity.GuidesFragment;
+import com.ghaythali.e_commerce_store_app.HomeActivity.HomeActivity;
 import com.ghaythali.e_commerce_store_app.R;
 
 /**

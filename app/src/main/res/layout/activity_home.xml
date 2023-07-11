@@ -9,7 +9,7 @@
     app:primaryMenuItemTextColor="@color/black"
     app:navigationDrawerBackgroundColor="@color/back"
     app:appbarColor="@color/white"
-    tools:context=".HomeActivity">
+    tools:context=".HomeActivity.HomeActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
