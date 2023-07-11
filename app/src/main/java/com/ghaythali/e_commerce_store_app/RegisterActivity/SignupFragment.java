@@ -1,16 +1,19 @@
 package com.ghaythali.e_commerce_store_app.RegisterActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.ghaythali.e_commerce_store_app.HomeActivity;
 import com.ghaythali.e_commerce_store_app.R;
 
 /**
@@ -77,6 +80,16 @@ public class SignupFragment extends Fragment {
                         .addToBackStack(null)
                         .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
                         .commit();
+            }
+        });
+        /****/
+        btn6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new Handler().postDelayed(() -> {
+                    startActivity(new Intent(getActivity(), HomeActivity.class));
+                    getActivity().finish();
+                },1500);
             }
         });
         return view;

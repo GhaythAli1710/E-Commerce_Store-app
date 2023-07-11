@@ -24,4 +24,8 @@
     <string name="confirmpassword">ConfirmPassword</string>
     <string name="signup1">SignUp</string>
     <string name="cancel">Cancel</string>
+    <string name="todo">todo</string>
+    <string name="home">home</string>
+    <string name="camera">camera</string>
+    <string name="search">search</string>
 </resources>
