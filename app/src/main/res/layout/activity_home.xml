@@ -5,24 +5,23 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/navigationDrawer"
-    app:appbarTitleTextSize="10dp"
-    app:primaryMenuItemTextColor="@color/black"
-    app:navigationDrawerBackgroundColor="@color/back"
-    app:appbarColor="@color/white"
+    app:primaryMenuItemTextColor="@color/prim_text_color"
+    app:appbarTitleTextSize="0dp"
+    app:appbarColor="@color/background_app"
     tools:context=".HomeActivity.HomeActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/store_string">
+        android:layout_height="match_parent">
 
         <RelativeLayout
             android:id="@+id/fragmentsContainerId"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/store_string"/>
+            android:background="@color/background_app"/>
 
         <include
+            android:id="@+id/barId"
             layout="@layout/custom_bottom_bar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

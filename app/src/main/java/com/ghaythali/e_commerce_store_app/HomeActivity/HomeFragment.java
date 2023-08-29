@@ -3,12 +3,15 @@ package com.ghaythali.e_commerce_store_app.HomeActivity;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.ghaythali.e_commerce_store_app.R;
+
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -61,6 +64,20 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+//        View view = inflater.inflate(R.layout.fragment_home, container, false);
+//        RecyclerView rvCategory = view.findViewById(R.id.rvOffers);
+//        List<ClassObj> listCategory = getClassesList();
+//        rvCategory.setHasFixedSize(true);
+//        categoryAdapter adapterCategory = new categoryAdapter(listCategory, R.layout.rv_item_design, R.id.name_item, R.id.image_item);
+//        rvCategory.setLayoutManager(new LinearLayoutManager(this.mCtx,LinearLayoutManager.HORIZONTAL,false));
+//        rvCategory.setAdapter(adapterCategory);
+//        /**/
+//        RecyclerView rvCommon = view.findViewById(R.id.rvCommon);
+//        List<ProductObj> listCommon = getCommonList();
+//        rvCommon.setHasFixedSize(true);
+//        commonAdapter commonAdapter = new commonAdapter(listCommon, R.layout.rv_item_design_common, R.id.name_product, R.id.market_product, R.id.price_product, R.id.image_product);
+//        rvCommon.setLayoutManager(new LinearLayoutManager(this.mCtx,LinearLayoutManager.VERTICAL,false));
+//        rvCommon.setAdapter(commonAdapter);
         return inflater.inflate(R.layout.fragment_home, container, false);
     }
 }

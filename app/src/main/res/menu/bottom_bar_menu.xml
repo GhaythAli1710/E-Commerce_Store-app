@@ -5,22 +5,23 @@
 
     <item
         android:id="@+id/itemHomeBottomBar"
-        android:title="@string/home"
+        android:title="@string/Home"
         android:icon="@drawable/ic_home"
+        android:iconTint="@color/Black"
         app:cnb_iconColor="@color/black"
-        app:cnb_backgroundColor="@color/black_40"/>
+        app:cnb_backgroundColor="@color/highlighter" />
 
     <item
-        android:id="@+id/itemCameraBottomBar"
-        android:title="@string/camera"
-        android:icon="@drawable/ic_camera"
+        android:id="@+id/itemNotificationBottomBar"
+        android:title="@string/Notification"
+        android:icon="@drawable/ic_notification"
         app:cnb_iconColor="@color/black"
-        app:cnb_backgroundColor="@color/black_40"/>
+        app:cnb_backgroundColor="@color/highlighter"/>
 
     <item
-        android:id="@+id/itemSearchBottomBar"
-        android:title="@string/search"
-        android:icon="@drawable/ic_search"
+        android:id="@+id/itemProfileBottomBar"
+        android:title="@string/Profile"
+        android:icon="@drawable/ic_profile"
         app:cnb_iconColor="@color/black"
-        app:cnb_backgroundColor="@color/black_40"/>
+        app:cnb_backgroundColor="@color/highlighter"/>
 </menu>

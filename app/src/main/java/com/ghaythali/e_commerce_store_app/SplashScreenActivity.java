@@ -7,21 +7,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.WindowManager;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.widget.ImageView;
-import android.widget.TextView;
-
 import com.ghaythali.e_commerce_store_app.HomeActivity.HomeActivity;
+import com.ghaythali.e_commerce_store_app.InfoAppActivity.InfoAppActivity;
 
 @SuppressLint("CustomSplashScreen")
 public class SplashScreenActivity extends AppCompatActivity {
 
     /****/
     private static final int SPLASH_SCREEN = 2100;
-    private Animation topAnim,bottomAnim;
-    private ImageView logoApp;
-    private TextView nameApp, categoryApp, versionApp;
 
     /****/
     @Override
@@ -39,21 +32,10 @@ public class SplashScreenActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         /**/
-        logoApp=findViewById(R.id.logo_app);
-        nameApp=findViewById(R.id.name_app);
-        categoryApp=findViewById(R.id.category_app);
-        versionApp=findViewById(R.id.version_app);
-        /**/
-        topAnim= AnimationUtils.loadAnimation(this,R.anim.top_animation);
-        bottomAnim= AnimationUtils.loadAnimation(this,R.anim.bottom_animation);
     }
 
     /****/
     private void Action(){
-        logoApp.setAnimation(topAnim);
-        nameApp.setAnimation(bottomAnim);
-        categoryApp.setAnimation(bottomAnim);
-        versionApp.setAnimation(bottomAnim);
         /**/
         new Handler().postDelayed(() -> {
 //                if(checkSelfPermission( Manifest.permission.READ_EXTERNAL_STORAGE)!= PackageManager.PERMISSION_GRANTED) {
@@ -62,8 +44,8 @@ public class SplashScreenActivity extends AppCompatActivity {
 //                else{
 //                    startActivity(new Intent(SplashScreenActivity.this,MainActivity.class));
 //                }
-//            startActivity(new Intent(SplashScreenActivity.this, InfoAppActivity.class));
-            startActivity(new Intent(SplashScreenActivity.this, HomeActivity.class));
+            startActivity(new Intent(SplashScreenActivity.this, InfoAppActivity.class));
+//            startActivity(new Intent(SplashScreenActivity.this, HomeActivity.class));
 
             finish();
         },SPLASH_SCREEN);

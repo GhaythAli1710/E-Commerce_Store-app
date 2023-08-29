@@ -11,6 +11,12 @@
     <color name="store_string">#E3E3E3</color>
     <color name="black_50">#80000000</color>
     <color name="black_40">#66715D5D</color>
-    <color name="back">#808080</color>
+    <color name="background_app">#FFFFFF</color>
+    <color name="prim_text_color">#000000</color>
+    <color name="sec_text_color">#666666</color>
+    <color name="highlighter">#97B8B8B8</color>
+    <color name="without">#00FDFDFD</color>
+
+
 
 </resources>

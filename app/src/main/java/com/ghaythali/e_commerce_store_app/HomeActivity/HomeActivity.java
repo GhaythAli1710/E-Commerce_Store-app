@@ -7,10 +7,12 @@ import android.annotation.SuppressLint;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.ghaythali.e_commerce_store_app.InsertPhotoFragment;
 import com.ghaythali.e_commerce_store_app.R;
 import com.ismaeldivita.chipnavigation.ChipNavigationBar;
 import com.shrikanthravi.customnavigationdrawer2.data.MenuItem;
@@ -31,7 +33,8 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getWindow().setStatusBarColor(R.color.black);
         getWindow().setColorMode(ActivityInfo.COLOR_MODE_HDR);
 
@@ -76,10 +79,10 @@ public class HomeActivity extends AppCompatActivity {
                             fragment
                     ).commit();
             textView.setVisibility(View.VISIBLE);
-            textView.setText("30");
+            textView.setText("3");
             chipNavigationBar.setItemSelected(R.id.itemHomeBottomBar, false);
-            chipNavigationBar.setItemSelected(R.id.itemCameraBottomBar, false);
-            chipNavigationBar.setItemSelected(R.id.itemSearchBottomBar, false);
+            chipNavigationBar.setItemSelected(R.id.itemNotificationBottomBar, false);
+            chipNavigationBar.setItemSelected(R.id.itemProfileBottomBar, false);
         });
     }
 
@@ -88,9 +91,9 @@ public class HomeActivity extends AppCompatActivity {
         chipNavigationBar.setOnItemSelectedListener(i -> {
             if(i==R.id.itemHomeBottomBar) {
                 fragment = new HomeFragment();
-            } else if (i==R.id.itemCameraBottomBar) {
+            } else if (i==R.id.itemNotificationBottomBar) {
                 fragment = new CameraFragment();
-            } else if (i==R.id.itemSearchBottomBar) {
+            } else if (i==R.id.itemProfileBottomBar) {
                 fragment = new SearchFragment();
             }
             getSupportFragmentManager()
@@ -109,6 +112,10 @@ public class HomeActivity extends AppCompatActivity {
                     Toast.makeText(this, "1", Toast.LENGTH_SHORT).show();
                     break;
                 case 1:
+                    fragment = new InsertPhotoFragment();
+                    chipNavigationBar.setItemSelected(R.id.itemHomeBottomBar, false);
+                    chipNavigationBar.setItemSelected(R.id.itemNotificationBottomBar, false);
+                    chipNavigationBar.setItemSelected(R.id.itemProfileBottomBar, false);
                     Toast.makeText(this, "2", Toast.LENGTH_SHORT).show();
                     break;
                 case 2:
@@ -122,12 +129,16 @@ public class HomeActivity extends AppCompatActivity {
         sNavigationDrawer.setDrawerListener(new SNavigationDrawer.DrawerListener() {
             @Override
             public void onDrawerOpening() {
-
+                menuSelector();
             }
 
             @Override
             public void onDrawerClosing() {
-                menuSelector();
+                getSupportFragmentManager()
+                        .beginTransaction().replace(
+                                R.id.fragmentsContainerId,
+                                Objects.requireNonNull(fragment)
+                        ).commit();
             }
 
             @Override

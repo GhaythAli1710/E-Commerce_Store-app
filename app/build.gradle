@@ -40,5 +40,6 @@ dependencies {
     implementation 'com.airbnb.android:lottie:3.4.4'
     implementation 'com.github.shrikanth7698:Custom-Navigation-Drawer:v0.0.1'
     implementation 'com.github.ismaeldivita:chip-navigation-bar:1.4.0'
+    implementation 'com.android.volley:volley:1.2.1'
 
 }

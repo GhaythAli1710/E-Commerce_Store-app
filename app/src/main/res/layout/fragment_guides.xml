@@ -5,17 +5,17 @@
     android:layout_height="match_parent"
     tools:context=".InfoAppActivity.GuidesFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/guides" />
+        android:src="@drawable/info2"
+        android:contentDescription="@string/todo" />
 
     <Button
         android:id="@+id/guidesNextBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"/>
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="@color/without"/>
 
 
 </FrameLayout>

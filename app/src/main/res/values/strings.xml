@@ -28,4 +28,16 @@
     <string name="home">home</string>
     <string name="camera">camera</string>
     <string name="search">search</string>
+    <string name="Home">Home</string>
+    <string name="Profile">Profile</string>
+    <string name="Notification">Notification</string>
+    <string name="welcome_our">
+       Welcome,\nOur Fashions App
+    </string>
+    <string name="welcome">Welcome,</string>
+    <string name="our_fashions_app">Our Fashions App</string>
+    <string name="search_">Search...</string>
+    <string name="insert_the_product_photo_from_your_device_n_either_through_the_camera_n_or_from_the_gallery">Insert the product photo From your Device,\n Either through the Camera \n or from the Gallery ..</string>
+    <string name="your_product">YOUR PRODUCT</string>
+    <string name="submit">SUBMIT</string>
 </resources>

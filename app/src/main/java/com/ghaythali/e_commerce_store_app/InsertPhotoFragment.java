@@ -1,22 +1,25 @@
-package com.ghaythali.e_commerce_store_app.InfoAppActivity;
+package com.ghaythali.e_commerce_store_app;
 
+import static android.app.Activity.RESULT_OK;
+
+import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.ghaythali.e_commerce_store_app.R;
-
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link TipsFragment#newInstance} factory method to
+ * Use the {@link InsertPhotoFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class TipsFragment extends Fragment {
+public class InsertPhotoFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -26,8 +29,10 @@ public class TipsFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private final int GALLERY_REQ_CODE = 1000;
 
-    public TipsFragment() {
+
+    public InsertPhotoFragment() {
         // Required empty public constructor
     }
 
@@ -37,11 +42,11 @@ public class TipsFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment TipsFragment.
+     * @return A new instance of fragment InsertPhotoFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static TipsFragment newInstance(String param1, String param2) {
-        TipsFragment fragment = new TipsFragment();
+    public static InsertPhotoFragment newInstance(String param1, String param2) {
+        InsertPhotoFragment fragment = new InsertPhotoFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -61,18 +66,39 @@ public class TipsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_tips, container, false);
-        view.findViewById(R.id.tipsNextBtn).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        // Inflate the layout for this fragment
+        View view = inflater.inflate(R.layout.fragment_insert_photo, container, false);
+        //
+        view.findViewById(R.id.uploadBtnId).setOnClickListener(view1 -> uploadRX());
+        //
+        view.findViewById(R.id.scanBtnId).setOnClickListener(view12 -> scanRX());
+        return view;
+    }
+    /*****/
+    private void uploadRX(){
+        Intent iGallery = new Intent(Intent.ACTION_PICK);
+        iGallery.setData(MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+        startActivityForResult(iGallery, GALLERY_REQ_CODE);
+
+    }
+    /*****/
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if(resultCode==RESULT_OK){
+            if(requestCode==GALLERY_REQ_CODE){
                 getActivity().getSupportFragmentManager()
                         .beginTransaction()
-                        .replace(R.id.fragmentesInfoAppContainerId, new PermissionsFragment())
+                        .replace(R.id.fragmentsContainerId, new PreviewPhotoFragment(data.getData()))
                         .addToBackStack(null)
                         .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
                         .commit();
             }
-        });
-        return view;
+        }
+    }
+    /*****/
+    private void scanRX(){
+
     }
 }

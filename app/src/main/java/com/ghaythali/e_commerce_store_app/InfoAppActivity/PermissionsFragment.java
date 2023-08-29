@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.airbnb.lottie.LottieAnimationView;
+import com.ghaythali.e_commerce_store_app.HomeActivity.HomeActivity;
 import com.ghaythali.e_commerce_store_app.R;
 import com.ghaythali.e_commerce_store_app.RegisterActivity.RegisterActivity;
 
@@ -90,7 +91,7 @@ public class PermissionsFragment extends Fragment {
             //
             new Handler().postDelayed(() -> {
                 grantedPermissions();
-                startActivity(new Intent(getActivity(), RegisterActivity.class));
+                startActivity(new Intent(getActivity(), HomeActivity.class));
                 getActivity().finish();
             },1500);
         });
